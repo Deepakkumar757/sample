@@ -1,0 +1,67 @@
+.to_do_main{
+    font-size: large;
+    height: 100%;
+    width: 100%;
+    /* display: flex;
+   justify-content: center; */
+   background-color: antiquewhite;
+}
+.to_do_input{
+    width: 80% ;
+    height: 75px;
+    border: 2px solid red;
+    border-radius: 10px;
+    margin: 10px;
+    background: transparent;
+    font-size: 25px;
+    padding: 0 0 0 20px
+}
+.to_do_add_btn{
+    width: 70px;
+    height: 75px;
+    border: 2px solid red;
+    border-radius: 10%;
+    margin: 10px;
+    font-size: 25px;
+    background: transparent;
+}
+.to_do_add_btn:hover{
+    background-color: black;
+    color: red;
+}
+.list_div{
+    width: 89%;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    font-size: 25px;
+    padding: 0 0 0 20px;
+    margin: 15px;
+    border-radius: 5px;
+    border: 5px solid orange;
+    font-weight: 51px;
+    background-color: rgb(151, 236, 151);
+}
+.delete_btn{
+    width: 2%;
+    height: 35px;
+    margin: 15px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+.delete_btn:hover{
+    background-color: white;
+    color: red;
+}
+.list_label{
+    margin: 15px;
+    font-size: 30px;
+
+}
+.input_div{
+    display: flex;
+    justify-content: center;
+    height: 15%;
+    width: 100%;
+}

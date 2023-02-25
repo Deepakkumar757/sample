@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Calculator from './components/Calculator'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import VideoStream from './components/videoStream'
+import CrudeInLocalStorage from './components/crud_in_ls'
+import ToDo from './components/do_to_list'
+const errorElement = <div className="main_page">Something Went Wrong</div>
+const route = [
+  {
+    path: "/",
+    element: <>Home</>,
+    errorElement
+  },
+  {
+    path: "/calculator",
+    element: <Calculator />,
+    errorElement
+  },
+  {
+    path: "/video",
+    element: <VideoStream />,
+    errorElement
+  },
+  {
+    path:"/to_do",
+    element: <ToDo/>,
+    errorElement
+  },
+  {
+    path:"/crud_in_ls",
+    element: <CrudeInLocalStorage/>,
+    errorElement
+  }
 
-function App() {
+]
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main_page'>  <RouterProvider router={createBrowserRouter(route)} />
     </div>
-  );
-}
 
-export default App;
+  )
+}
+export default App
